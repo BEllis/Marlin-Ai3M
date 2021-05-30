@@ -52,21 +52,17 @@
 #define Y_DIR_PIN          61
 #define Y_ENABLE_PIN       56
 
-#define Y2_STEP_PIN        36
-#define Y2_DIR_PIN         34
-#define Y2_ENABLE_PIN      30
-
 #define Z_STEP_PIN         46
 #define Z_DIR_PIN          48
 #define Z_ENABLE_PIN       62
 
-#define Z2_STEP_PIN        36
-#define Z2_DIR_PIN         34
-#define Z2_ENABLE_PIN      30
-
 #define E0_STEP_PIN        26
 #define E0_DIR_PIN         28
 #define E0_ENABLE_PIN      24
+
+#define E1_STEP_PIN        36
+#define E1_DIR_PIN         34
+#define E1_ENABLE_PIN      30
 
 // EndStops
 #define X_MIN_PIN           3

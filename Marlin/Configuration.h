@@ -81,7 +81,7 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(davidramiro)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(bellis)" // Who made the changes.
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION   // will be shown during bootup in line 1
 #define STRING_SPLASH_LINE2 CUSTOM_BUILD_VERSION  // will be shown during bootup in line 2
@@ -146,13 +146,13 @@
 
 // This defines the number of extruders
 // :[1, 2, 3, 4, 5]
-#define EXTRUDERS 1
+#define EXTRUDERS 2
 
 // Generally expected filament diameter (1.75, 2.85, 3.0, ...). Used for Volumetric, Filament Width Sensor, etc.
 #define DEFAULT_NOMINAL_FILAMENT_DIA 1.75
 
 // For Cyclops or any "multi-extruder" that shares a single nozzle.
-//#define SINGLENOZZLE
+#define SINGLENOZZLE
 
 /**
  * Průša MK2 Single Nozzle Multi-Material Multiplexer, and variants.
@@ -556,14 +556,14 @@
  *          TMC5130, TMC5130_STANDALONE
  * :['A4988', 'DRV8825', 'LV8729', 'L6470', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE']
  */
-#define X_DRIVER_TYPE  TMC2208_STANDALONE // comment out for stock drivers
-#define Y_DRIVER_TYPE  TMC2208_STANDALONE // comment out for stock drivers
-#define Z_DRIVER_TYPE  TMC2208_STANDALONE // comment out for stock drivers
+// #define X_DRIVER_TYPE  TMC2208_STANDALONE // comment out for stock drivers
+// #define Y_DRIVER_TYPE  TMC2208_STANDALONE // comment out for stock drivers
+// #define Z_DRIVER_TYPE  TMC2208_STANDALONE // comment out for stock drivers
 #define X2_DRIVER_TYPE TMC2208_STANDALONE
 #define Y2_DRIVER_TYPE TMC2208_STANDALONE
-#define Z2_DRIVER_TYPE TMC2208_STANDALONE // comment out for stock drivers
-#define E0_DRIVER_TYPE TMC2208_STANDALONE // comment out for stock drivers
-#define E1_DRIVER_TYPE TMC2208_STANDALONE // comment out for stock drivers
+// #define Z2_DRIVER_TYPE TMC2208_STANDALONE // comment out for stock drivers
+// #define E0_DRIVER_TYPE TMC2208_STANDALONE // comment out for stock drivers
+// #define E1_DRIVER_TYPE TMC2208_STANDALONE // comment out for stock drivers
 #define E2_DRIVER_TYPE TMC2208_STANDALONE
 #define E3_DRIVER_TYPE TMC2208_STANDALONE
 #define E4_DRIVER_TYPE TMC2208_STANDALONE
@@ -614,14 +614,14 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 92.6 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 132.3, 132.3 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 6, 60 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 6, 60, 60 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -629,7 +629,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 2000,  60, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 3000, 2000,  60, 10000, 10000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -851,9 +851,9 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false // set to true for stock drivers or TMC2208 with reversed connectors
-#define INVERT_Y_DIR true // set to false for stock drivers or TMC2208 with reversed connectors
-#define INVERT_Z_DIR true // set to false for stock drivers or TMC2208 with reversed connectors
+#define INVERT_X_DIR true // set to true for stock drivers or TMC2208 with reversed connectors
+#define INVERT_Y_DIR false // set to false for stock drivers or TMC2208 with reversed connectors
+#define INVERT_Z_DIR false // set to false for stock drivers or TMC2208 with reversed connectors
 
 // @section extruder
 
